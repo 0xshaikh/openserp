@@ -25,6 +25,16 @@
 
 <img src="assets/audit-demo.png" alt="OpenSERP audit output showing site score and issue breakdown" width="800" />
 
+<br />
+
+<h3>Live Website</h3>
+
+<p align="center">
+  <a href="https://github.com/0xshaikh/openserp/tree/main/website">
+    <strong>Try the interactive demo with AI-powered analysis →</strong>
+  </a>
+</p>
+
 </div>
 
 ---
