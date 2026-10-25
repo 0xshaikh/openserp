@@ -25,6 +25,13 @@ jobs:
           pip install -e . pytest
       - name: Test (offline — network is monkeypatched)
         run: pytest -q
+      - name: Packaging — non-editable wheel must provide the console script
+        run: |
+          # `pip install git+https://github.com/0xshaikh/openserp.git` does a
+          # non-editable build, so prove that path too, not just -e .
+          pip wheel . -w wheelhouse --no-deps -q
+          python -m pip install --force-reinstall --no-deps wheelhouse/openserp-*.whl -q
+          python -c "import importlib.util; assert importlib.util.find_spec('openserp'), 'module not importable'"
       - name: CLI smoke test (help only, no network)
         run: |
           openserp --help

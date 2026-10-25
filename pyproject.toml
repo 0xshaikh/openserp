@@ -2,6 +2,15 @@
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
+# `openserp.py` is a single-module project sitting in a flat layout next to
+# `tests/` and `tools/` directories. Without this declaration setuptools'
+# auto-discovery does not pick the module up, the wheel ships no code, and the
+# installed `openserp` console script dies with `ModuleNotFoundError: No module
+# named 'openserp'`. CI caught this; tests stayed green because pytest gets the
+# repo root from [tool.pytest.ini_options] pythonpath.
+[tool.setuptools]
+py-modules = ["openserp"]
+
 [project]
 name = "openserp"
 version = "0.1.0"
