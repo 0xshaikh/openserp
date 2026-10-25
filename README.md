@@ -30,9 +30,23 @@
 <h3>Live Website</h3>
 
 <p align="center">
-  <a href="https://github.com/0xshaikh/openserp/tree/main/website">
+  <a href="https://0xshaikh.github.io/openserp/">
     <strong>Try the interactive demo with AI-powered analysis →</strong>
   </a>
+</p>
+
+<br />
+
+<h3>Screenshots</h3>
+
+<p align="center">
+  <img src="site/assets/openserp-live-hero.png" alt="Hero section" width="400" />
+  <img src="site/assets/openserp-live-features.png" alt="Features" width="400" />
+</p>
+
+<p align="center">
+  <img src="site/assets/openserp-live-demo.png" alt="Demo" width="400" />
+  <img src="site/assets/openserp-live-rubric.png" alt="Rubric" width="400" />
 </p>
 
 </div>
