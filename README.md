@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="icon.svg" alt="OpenSERP Logo" width="80" height="80" />
+
 **Open-source SEO research & site-audit toolkit**
 
 # OpenSERP
@@ -14,6 +16,7 @@
 [![Deps: 5](https://img.shields.io/badge/deps-5-2EA043?style=flat-square)]()
 [![Tests: 90](https://img.shields.io/badge/tests-90-success?style=flat-square)]()
 [![API keys: 0](https://img.shields.io/badge/API%20keys-0-yellow?style=flat-square)]()
+[![Status](https://img.shields.io/badge/status-production%20ready-brightgreen?style=flat-square)]()
 
 [Quick start](#quick-start) · [Features](#features) · [The rubric](#the-audit-rubric-is-auditable) · [Architecture](#architecture) · [Roadmap](#roadmap) · [Contributing](#contributing)
 
