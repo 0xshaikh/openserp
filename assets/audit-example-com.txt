@@ -1,7 +1,7 @@
 [36m╭─[0m[36m─────────────────────────────[0m[36m openserp audit — [0m[1;36mexample.com[0m[36m [0m[36m─────────────────────────────[0m[36m─╮[0m
 [36m│[0m [1mSEO score[0m [1m34.8 / 100[0m                                                                     [36m│[0m
 [36m│[0m pages [1m1[0m fetched / [1m1[0m parsed                                                               [36m│[0m
-[36m│[0m sitemap [1mnot found[0m  ·  https [1mno[0m  ·  2.77s                                                 [36m│[0m
+[36m│[0m sitemap [1mnot found[0m  ·  https [1mno[0m  ·  2.34s                                                 [36m│[0m
 [36m╰──────────────────────────────────────────────────────────────────────────────────────────╯[0m
 [3m                                Site checks                                [0m
 [1mcheck         [0m[1m [0m[1m [0m[1mresult                                                     [0m

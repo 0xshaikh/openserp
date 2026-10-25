@@ -1,7 +1,7 @@
 [36m╭─[0m[36m─────────────────────────[0m[36m openserp audit — [0m[1;36mpalletsprojects.com[0m[36m [0m[36m─────────────────────────[0m[36m─╮[0m
 [36m│[0m [1mSEO score[0m [1m34.0 / 100[0m                                                                     [36m│[0m
 [36m│[0m pages [1m5[0m fetched / [1m5[0m parsed                                                               [36m│[0m
-[36m│[0m sitemap [1mnot found[0m  ·  https [1myes[0m  ·  18.85s                                               [36m│[0m
+[36m│[0m sitemap [1mnot found[0m  ·  https [1myes[0m  ·  19.07s                                               [36m│[0m
 [36m╰──────────────────────────────────────────────────────────────────────────────────────────╯[0m
 [3m                                    Site checks                                     [0m
 [1mcheck         [0m[1m [0m[1m [0m[1mresult                                                              [0m

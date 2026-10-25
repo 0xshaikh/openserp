@@ -1,30 +1,30 @@
- [1;36m25[0m long-tail ideas for [32m'seo'[0m 
- #  keyword      chars  tokens
- [1;36m1[0m  easy seo         [1;36m8[0m       [1;36m2[0m
- [1;36m2[0m  free seo         [1;36m8[0m       [1;36m2[0m
- [1;36m3[0m  seo cost         [1;36m8[0m       [1;36m2[0m
- [1;36m4[0m  seo tips         [1;36m8[0m       [1;36m2[0m
- [1;36m5[0m  cheap seo        [1;36m9[0m       [1;36m2[0m
- [1;36m6[0m  quick seo        [1;36m9[0m       [1;36m2[0m
- [1;36m7[0m  seo buyer        [1;36m9[0m       [1;36m2[0m
- [1;36m8[0m  seo guide        [1;36m9[0m       [1;36m2[0m
- [1;36m9[0m  seo tools        [1;36m9[0m       [1;36m2[0m
-[1;36m10[0m  how to seo      [1;36m10[0m       [1;36m3[0m
-[1;36m11[0m  modern seo      [1;36m10[0m       [1;36m2[0m
-[1;36m12[0m  seo agency      [1;36m10[0m       [1;36m2[0m
-[1;36m13[0m  seo how to      [1;36m10[0m       [1;36m3[0m
-[1;36m14[0m  seo review      [1;36m10[0m       [1;36m2[0m
-[1;36m15[0m  seo vs aeo      [1;36m10[0m       [1;36m3[0m
-[1;36m16[0m  seo vs geo      [1;36m10[0m       [1;36m3[0m
-[1;36m17[0m  seo vs ppc      [1;36m10[0m       [1;36m3[0m
-[1;36m18[0m  seo vs sem      [1;36m10[0m       [1;36m3[0m
-[1;36m19[0m  seo vs smo      [1;36m10[0m       [1;36m3[0m
-[1;36m20[0m  seo vs tsk      [1;36m10[0m       [1;36m3[0m
-[1;36m21[0m  simple seo      [1;36m10[0m       [1;36m2[0m
-[1;36m22[0m  seo pricing     [1;36m11[0m       [1;36m2[0m
-[1;36m23[0m  seo reviews     [1;36m11[0m       [1;36m2[0m
-[1;36m24[0m  seo starter     [1;36m11[0m       [1;36m2[0m
-[1;36m25[0m  seo what is     [1;36m11[0m       [1;36m3[0m
+ [1;36m25[0m long-tail ideas for [32m'seo'[0m  
+ #  keyword       chars  tokens
+ [1;36m1[0m  easy seo          [1;36m8[0m       [1;36m2[0m
+ [1;36m2[0m  free seo          [1;36m8[0m       [1;36m2[0m
+ [1;36m3[0m  seo cost          [1;36m8[0m       [1;36m2[0m
+ [1;36m4[0m  seo tips          [1;36m8[0m       [1;36m2[0m
+ [1;36m5[0m  cheap seo         [1;36m9[0m       [1;36m2[0m
+ [1;36m6[0m  quick seo         [1;36m9[0m       [1;36m2[0m
+ [1;36m7[0m  seo buyer         [1;36m9[0m       [1;36m2[0m
+ [1;36m8[0m  seo guide         [1;36m9[0m       [1;36m2[0m
+ [1;36m9[0m  seo tools         [1;36m9[0m       [1;36m2[0m
+[1;36m10[0m  how to seo       [1;36m10[0m       [1;36m3[0m
+[1;36m11[0m  modern seo       [1;36m10[0m       [1;36m2[0m
+[1;36m12[0m  seo agency       [1;36m10[0m       [1;36m2[0m
+[1;36m13[0m  seo how to       [1;36m10[0m       [1;36m3[0m
+[1;36m14[0m  seo review       [1;36m10[0m       [1;36m2[0m
+[1;36m15[0m  seo vs aeo       [1;36m10[0m       [1;36m3[0m
+[1;36m16[0m  seo vs geo       [1;36m10[0m       [1;36m3[0m
+[1;36m17[0m  seo vs sem       [1;36m10[0m       [1;36m3[0m
+[1;36m18[0m  simple seo       [1;36m10[0m       [1;36m2[0m
+[1;36m19[0m  seo pricing      [1;36m11[0m       [1;36m2[0m
+[1;36m20[0m  seo reviews      [1;36m11[0m       [1;36m2[0m
+[1;36m21[0m  seo starter      [1;36m11[0m       [1;36m2[0m
+[1;36m22[0m  seo what is      [1;36m11[0m       [1;36m3[0m
+[1;36m23[0m  what is seo      [1;36m11[0m       [1;36m3[0m
+[1;36m24[0m  why use seo      [1;36m11[0m       [1;36m3[0m
+[1;36m25[0m  advanced seo     [1;36m12[0m       [1;36m2[0m
 Source: Google Suggest autocomplete [1m([0m[1;36m25[0m unique after dedupe + seed-relevance filter[1m)[0m. Ranked
 by query length — a 
 breadth heuristic, NOT search volume.
