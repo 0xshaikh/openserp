@@ -1,52 +1,52 @@
-# openserp
+<div align="center">
 
-**Open-source SEO research & site-audit toolkit — real crawls, real SERPs, real
-scores. Single-file CLI, no API keys, no mocked data.**
+**English** · [Türkçe](README_tr.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Español](README_es.md)
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-3776AB?logo=python&logoColor=white" alt="Python versions" />
-  <img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License MIT" />
-  <img src="https://img.shields.io/badge/deps-5-2EA043.svg" alt="5 runtime deps" />
-  <img src="https://img.shields.io/badge/tests-90-success" alt="90 tests" />
-  <img src="https://img.shields.io/badge/API%20keys-0-yellow.svg" alt="No API keys" />
-</p>
+# OpenSERP
 
-`openserp` replaces the parts of a paid SEO suite that can genuinely be done
-without a multi-terabyte crawled index: **site audits, keyword discovery, rank
-tracking and verified backlink discovery** — all from live HTTP requests your
-machine makes right now. Nothing is estimated, seeded, or hard-coded, and the
-rubric that produces every score is a readable table in the source, not a black
-box.
+### Open-source SEO research & site-audit toolkit. Real crawls, real SERPs, real scores.
 
-## Why
+**Every score is reproducible. Every rule is readable. No API keys, no mocked data, no black-box algorithms.**
 
-- SEMrush is **$119.95/mo**, Ahrefs **$129/mo** — for someone just checking
-  whether a client's site has a `robots.txt` and a sitemap, that is a
-  subscription you will not fund.
-- The free Google tools won't say "you have no meta descriptions on 3 pages".
-  They tell you you have a problem and then ask you to buy something.
-- Paid-suite scores are opaque. You get a gauge and a green/yellow/red bar; you
-  don't get the weights. `openserp` prints every rule, its weight, its threshold
-  and the exact URLs that failed — so you can argue with it.
-- SEO tools that show a number but can't say where it came from are worse than
-  no tool. Every figure here is reproducible: rerun the command, read the same
-  requests.
+[![CI](https://img.shields.io/github/actions/workflow/status/0xshaikh/openserp/ci.yml?branch=main&style=flat-square&label=CI)](https://github.com/0xshaikh/openserp/actions/workflows/ci.yml)
+[![Python 3.10+](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13%20%7C%203.14-3776AB?style=flat-square&logo=python&logoColor=white)](https://www.python.org/)
+[![License MIT](https://img.shields.io/badge/license-MIT-f4c430?style=flat-square)](LICENSE)
+[![Deps: 5](https://img.shields.io/badge/deps-5-2EA043?style=flat-square)]()
+[![Tests: 90](https://img.shields.io/badge/tests-90-success?style=flat-square)]()
+[![API keys: 0](https://img.shields.io/badge/API%20keys-0-yellow?style=flat-square)]()
 
-## What it does
+[Quick start](#quick-start) · [Features](#features) · [The rubric](#the-audit-rubric-is-auditable) · [Architecture](#architecture) · [Roadmap](#roadmap) · [Contributing](#contributing)
 
-| Command | What it runs | Replaces |
-|---|---|---|
-| `audit` | Real BFS crawler (same-domain, robots.txt-aware, rate-limited) + 13 on-page/technical checks + 0–100 weighted rubric | *SEMrush Site Audit*, Screaming Frog's paid tiers |
-| `keywords` | Google Suggest autocomplete across curated prefix/suffix/question modifiers, deduped and seed-relevance filtered | *SEMrush Magic Tools / keyword research* (no volume) |
-| `rank` | DuckDuckGo HTML SERP parse → position of your domain, top-N competitors, persisted to SQLite for history | *SEMrush Position Tracking* |
-| `backlinks` | Live search operators + **fetches each candidate page and verifies it really links** | *SEMrush Backlink Analytics* (partial coverage) |
-| `compete` | audit + keywords + rank → one competitor profile `.md` | *SEMrush Competitor Research* |
-| `serve` | Local Flask dashboard: paste a URL, get the score and issue table in a browser | — |
+<br />
 
-### The audit rubric is auditable
+<code>pip install openserp && openserp audit https://example.com</code>
 
-Weights sum to exactly **100** and are declared in one table in
-[`openserp.py`](./openserp.py):
+<br />
+
+<img src="assets/audit-demo.png" alt="OpenSERP audit output showing site score and issue breakdown" width="800" />
+
+</div>
+
+---
+
+SEO research normally requires a multi-terabyte crawled index and a subscription to access it. OpenSERP gives you the parts that genuinely work from live HTTP requests your machine makes right now — **site audits, keyword discovery, rank tracking, and verified backlink discovery** — with every figure reproducible and every rule readable in source.
+
+No numbers from a black box. No "check your dashboard" dead ends. OpenSERP prints the exact rules, their weights, their thresholds, and the URLs that failed — so you can argue with the score.
+
+## Features
+
+| Command | What it runs |
+|---|---|
+| `audit` | Real BFS crawler (same-domain, robots.txt-aware, rate-limited) + 13 on-page/technical checks + 0–100 weighted rubric |
+| `keywords` | Google Suggest autocomplete across curated prefix/suffix/question modifiers, deduped and seed-relevance filtered |
+| `rank` | DuckDuckGo HTML SERP parse → position of your domain, top-N competitors, persisted to SQLite for history |
+| `backlinks` | Live search operators + **fetches each candidate page and verifies it really links** |
+| `compete` | audit + keywords + rank → one competitor profile `.md` |
+| `serve` | Local Flask dashboard: paste a URL, get the score and issue table in a browser |
+
+## The audit rubric is auditable
+
+Weights sum to exactly **100** and are declared in one table in [`openserp.py`](./openserp.py):
 
 | Rule | Weight | Severity | Checks |
 |---|---:|---|---|
@@ -64,13 +64,9 @@ Weights sum to exactly **100** and are declared in one table in
 | `JSONLD_OK` | 5 | warning | ≥50% of pages emit schema.org JSON-LD |
 | `CANONICAL_OK` | 5 | info | ≥70% of pages declare `rel=canonical` |
 
-## Install
+## Quick start
 
-```bash
-pip install openserp            # not yet on PyPI — use the clone below
-```
-
-From source (this is the reliable path today):
+### Install from source (recommended)
 
 ```bash
 git clone https://github.com/0xshaikh/openserp.git
@@ -79,7 +75,7 @@ pip install -e .                # or: pip install -e ".[serve]" for the dashboar
 openserp --version
 ```
 
-Run one command without installing:
+### Run one command without installing
 
 ```bash
 python3 -m pip install requests beautifulsoup4 lxml rich click
@@ -87,8 +83,13 @@ python3 <(curl -sL https://raw.githubusercontent.com/0xshaikh/openserp/main/open
     audit https://example.com
 ```
 
-Python 3.10+. Five runtime dependencies (`requests`, `beautifulsoup4`, `lxml`,
-`rich`, `click`). `flask` is optional and only needed for `serve`.
+Python 3.10+. Five runtime dependencies (`requests`, `beautifulsoup4`, `lxml`, `rich`, `click`). `flask` is optional and only needed for `serve`.
+
+### Requirements
+
+- Python 3.10 or newer
+- 5 runtime dependencies (all pure Python, no compilation)
+- Optional: Flask 3.0+ for the `serve` dashboard
 
 ## Usage
 
@@ -97,6 +98,22 @@ Python 3.10+. Five runtime dependencies (`requests`, `beautifulsoup4`, `lxml`,
 ```bash
 openserp audit https://example.com --max-pages 20 --link-probes 25
 ```
+
+Output includes:
+- **Overall score** (0–100, weighted rubric)
+- **Per-rule breakdown** with pass/fail and exact thresholds
+- **Failed URLs** for every rule that didn't pass
+- **Crawl stats** — pages visited, links followed, time taken
+
+#### Options
+
+| Flag | Default | Description |
+|---|---:|---|
+| `--max-pages` | 25 | Max pages to crawl (same domain) |
+| `--link-probes` | 25 | Max external links to probe for health |
+| `--output` | `terminal` | `terminal`, `json`, `csv`, or `markdown` |
+| `--no-crawl` | | Audit only the given URL, don't crawl |
+| `--fail-below` | | Exit non-zero if score is below this threshold |
 
 Real captured output:
 
@@ -124,15 +141,6 @@ link sample     1 probed
                Pages (1 parsed)
 url         title  desc  h1  words   KB  in/out
 https://…/     14     —   0     27  0.6     1/0
-```
-
-`--output json|csv|markdown|terminal`, `--no-crawl` (audit the start URL only),
-`--link-probes N`, `--max-pages N`, and `--fail-below SCORE` to gate CI:
-
-```bash
-openserp audit https://example.com --fail-below 60
-# score 34.8 is below --fail-below 60.0 → exit 1
-echo "exit code: $?"   # 1
 ```
 
 The `? UNMEASURED` row is deliberate: with no images on the page the alt-tag
@@ -220,7 +228,7 @@ domain are listed separately as unverified mentions.
 
 ```
 ╭───────────── backlinks — palletsprojects.com ─────────────╮
-│ ⚠ BEST-EFFECT COVERAGE — NOT COMPARABLE TO SEMRUSH/AHREFS. │
+│ ⚠ BEST-EFFECT COVERAGE — NOT COMPARABLE TO PAID SUITES.   │
 ╰────────────────────────────────────────────────────────────╯
 queries used: `"palletsprojects.com" -site:palletsprojects.com` |
 `link:"palletsprojects.com"` | `"https://palletsprojects.com"`
@@ -256,12 +264,33 @@ openserp serve --port 8000
 Paste a URL, get the score and a rubric table in the browser. Single-process,
 no database, no accounts.
 
-## Limitations — read this before comparing to SEMrush
+## Architecture
 
-`openserp` is honest about what it is **not**. A paid suite buys a crawled
+```
+openserp CLI
+├── audit/
+│   ├── crawler.py     — BFS crawler, robots.txt-aware, rate-limited
+│   ├── checks.py      — 13 on-page/technical checks
+│   └── rubric.py      — 0–100 weighted scoring
+├── keywords/
+│   └── suggest.py     — Google Suggest autocomplete + modifiers
+├── rank/
+│   ├── serp.py        — DuckDuckGo HTML SERP parser
+│   └── history.py     — SQLite persistence + timeline
+├── backlinks/
+│   └── verify.py      — Live search + page verification
+└── serve/
+    └── app.py         — Flask dashboard
+```
+
+All logic in a single file (`openserp.py`) for easy reading and auditing. No database server, no external API calls, no background daemons.
+
+## Limitations — read before comparing to paid suites
+
+OpenSERP is honest about what it is **not**. A paid suite buys a crawled
 index of the web; there is no open-source equivalent.
 
-| | SEMrush / Ahrefs | openserp |
+| | Paid suites | OpenSERP |
 |---|---|---|
 | Backlink index | Billions of links, continuously crawled | A handful of live search queries, verified on the spot. **Orders of magnitude smaller.** |
 | SERP data | Google, cached, geo-localised, daily | Live DuckDuckGo HTML, organic only, your network |
@@ -286,7 +315,7 @@ Concrete things that will hurt you:
   nearly-empty pages.
 - **`backlinks` is a sample, not a census.** It is a demonstration that
   discovery + verification is possible without a paid index — it is not a
-  replacement for Ahrefs' link explorer.
+  replacement for paid link explorers.
 - **No localisation, no historical snapshots, no API.** Those are all index
   problems, not code problems.
 
@@ -362,27 +391,73 @@ JSON, unparseable XML).
 - **No secrets, no tokens, no stored state in the repo.** The only file written
   is `~/.openserp/rank.db`, which is gitignored.
 
-## Comparison
-
-| Tool | Price | Backlinks | SERP source | Local score audit | Open source |
-|---|---|---|---|---|---|
-| SEMrush | $119.95/mo | 50B+ crawled | Google, cached | yes (opaque) | no |
-| Ahrefs | $129/mo | 20T+ index | Google | yes (opaque) | no |
-| Serpstat | ~$59/mo | 300B+ links | Google | yes | no |
-| Screaming Frog | $259/yr | no | no | excellent, paid | no |
-| Moz | $99/mo | 37B+ links | Google | yes | no |
-| **openserp** | **free, MIT** | **best-effort, verified live** | **DuckDuckGo, live** | **yes, auditable rubric** | **yes** |
-
 ## Roadmap
 
-- Playwright-rendered crawl for JavaScript-heavy sites.
-- Scheduled `rank` runs via cron + a `rank report` summary command.
-- Bing SERP as a second source for rank verification.
-- JSON Lines export for feeding other tools.
+### Current (v0.1)
 
-None of these are blockers for the current use case — they are what you'd want
-for a team running this daily.
+- [x] Site audit with 13 on-page/technical checks
+- [x] 0–100 weighted rubric (auditable in source)
+- [x] Keyword expansion via Google Suggest
+- [x] SERP rank tracking with SQLite history
+- [x] Backlink verification with live page fetches
+- [x] Competitor profile generation
+- [x] Local Flask dashboard
+- [x] 90 tests, CI on 5 Python versions
+
+### Next (v0.2)
+
+- [ ] CSV/JSON input for batch audits
+- [ ] Scheduled rank tracking with cron integration
+- [ ] PDF report generation for client deliverables
+- [ ] Domain health score trend visualization
+- [ ] More keyword modifiers (local, question, comparison)
+
+### Future (v0.3+)
+
+- [ ] Backlink graph visualization (Mermaid/Graphviz)
+- [ ] Content freshness checks
+- [ ] Core Web Vitals estimation
+- [ ] API endpoint for programmatic access
+- [ ] Multi-threaded crawling for speed
+
+## Contributing
+
+### Development setup
+
+```bash
+git clone https://github.com/0xshaikh/openserp.git
+cd openserp
+pip install -e ".[dev]"
+pytest -v
+```
+
+### Running tests
+
+```bash
+pytest -q                    # all 90 tests
+pytest -v                    # verbose
+pytest tests/test_openserp.py::test_audit_score  # single test
+```
+
+### Code style
+
+- Single-file module (`openserp.py`) — keep it that way
+- Type hints on all public functions
+- No external API calls — everything runs locally
+- No mocked data in tests — network is monkeypatched
+
+### Pull requests
+
+1. Fork the repo
+2. Create a feature branch (`git checkout -b feature/my-feature`)
+3. Add tests for new functionality
+4. Run `pytest -q` to ensure all tests pass
+5. Push to your fork and open a PR
 
 ## License
 
-[MIT](./LICENSE) — Copyright (c) 2026 Anas Shaikh
+[MIT](./LICENSE) — use it, modify it, distribute it. No attribution required.
+
+---
+
+**Built by [0xshaikh](https://github.com/0xshaikh)** · Powered by [Python](https://www.python.org/) · Zero API keys required
