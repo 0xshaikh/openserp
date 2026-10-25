@@ -16,6 +16,14 @@
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2310b981'/><path d='M8 12l4 4 8-8' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><path d='M8 20h16' stroke='white' stroke-width='3' stroke-linecap='round'/></svg>">
 </head>
 <body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+        <div class="bg-grid"></div>
+    </div>
+
     <nav class="nav">
         <div class="nav-container">
             <a href="/" class="nav-logo">
@@ -77,15 +85,15 @@
             <div class="container">
                 <div class="stats-grid">
                     <div class="stat-item">
-                        <span class="stat-number">6</span>
+                        <span class="stat-number" data-target="6">0</span>
                         <span class="stat-label">Commands</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">5</span>
+                        <span class="stat-number" data-target="5">0</span>
                         <span class="stat-label">Dependencies</span>
                     </div>
                     <div class="stat-item">
-                        <span class="stat-number">90+</span>
+                        <span class="stat-number" data-target="90">0</span>
                         <span class="stat-label">Tests Passing</span>
                     </div>
                     <div class="stat-item">
@@ -99,10 +107,10 @@
         <!-- Features Section -->
         <section class="section" id="features">
             <div class="container">
-                <h2 class="section-title">Everything You Need for SEO Research</h2>
-                <p class="section-desc">Six commands. Five dependencies. Zero API keys. All reproducible.</p>
+                <h2 class="section-title reveal">Everything You Need for SEO Research</h2>
+                <p class="section-desc reveal reveal-delay-1">Six commands. Five dependencies. Zero API keys. All reproducible.</p>
                 <div class="features-grid">
-                    <div class="feature-card">
+                    <div class="feature-card reveal reveal-delay-2">
                         <div class="feature-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"></circle>
@@ -117,7 +125,7 @@
                             <span class="tag">Rubric</span>
                         </div>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal reveal-delay-3">
                         <div class="feature-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="11" cy="11" r="8"></circle>
@@ -132,7 +140,7 @@
                             <span class="tag">Deduped</span>
                         </div>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal reveal-delay-4">
                         <div class="feature-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M3 3v18h18"></path>
@@ -147,7 +155,7 @@
                             <span class="tag">SQLite</span>
                         </div>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal reveal-delay-2">
                         <div class="feature-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
@@ -162,7 +170,7 @@
                             <span class="tag">No Database</span>
                         </div>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal reveal-delay-3">
                         <div class="feature-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
@@ -176,7 +184,7 @@
                             <span class="tag">Profile</span>
                         </div>
                     </div>
-                    <div class="feature-card">
+                    <div class="feature-card reveal reveal-delay-4">
                         <div class="feature-icon">
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>

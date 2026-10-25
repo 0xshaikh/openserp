@@ -1,10 +1,10 @@
 <div align="center">
 
-**English** · [Türkçe](README_tr.md) · [Français](README_fr.md) · [Deutsch](README_de.md) · [Español](README_es.md)
+**Open-source SEO research & site-audit toolkit**
 
 # OpenSERP
 
-### Open-source SEO research & site-audit toolkit. Real crawls, real SERPs, real scores.
+### Real crawls, real SERPs, real scores.
 
 **Every score is reproducible. Every rule is readable. No API keys, no mocked data, no black-box algorithms.**
 
