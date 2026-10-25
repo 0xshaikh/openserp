@@ -40,13 +40,17 @@
 <h3>Screenshots</h3>
 
 <p align="center">
-  <img src="site/assets/openserp-live-hero.png" alt="Hero section" width="400" />
-  <img src="site/assets/openserp-live-features.png" alt="Features" width="400" />
+  <img src="site/assets/v2-hero.png" alt="Hero section with animated background" width="400" />
+  <img src="site/assets/v2-features.png" alt="Features grid with hover animations" width="400" />
 </p>
 
 <p align="center">
-  <img src="site/assets/openserp-live-demo.png" alt="Demo" width="400" />
-  <img src="site/assets/openserp-live-rubric.png" alt="Rubric" width="400" />
+  <img src="site/assets/v2-demo.png" alt="Live demo with AI analysis" width="400" />
+  <img src="site/assets/v2-rubric.png" alt="Audit rubric table" width="400" />
+</p>
+
+<p align="center">
+  <img src="site/assets/v2-roadmap.png" alt="Project roadmap" width="400" />
 </p>
 
 </div>
