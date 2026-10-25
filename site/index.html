@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenSERP — Open-source SEO Research & Site Audit Toolkit</title>
+    <meta name="description" content="OpenSERP is a free, open-source SEO toolkit. Run site audits, keyword research, rank tracking, and backlink discovery. No API keys, no subscriptions.">
+    <meta name="author" content="0xshaikh">
+    <meta property="og:title" content="OpenSERP — Open-source SEO Toolkit">
+    <meta property="og:description" content="Real crawls. Real SERPs. Real scores. No subscriptions.">
+    <meta property="og:type" content="website">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%2310b981'/><path d='M8 12l4 4 8-8' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/><path d='M8 20h16' stroke='white' stroke-width='3' stroke-linecap='round'/></svg>">
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+                    <rect width="32" height="32" rx="8" fill="#10b981"/>
+                    <path d="M8 12l4 4 8-8" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8 20h16" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+                <span>OpenSERP</span>
+            </a>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#demo" class="nav-link">Demo</a>
+                <a href="#docs" class="nav-link">Docs</a>
+                <a href="https://github.com/0xshaikh/openserp" target="_blank" class="nav-link nav-link-cta">GitHub</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Open Source · MIT License · No API Keys
+                </div>
+                <h1>
+                    SEO Research<br>
+                    <span class="gradient-text">Without the Subscriptions.</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Real crawls. Real SERPs. Real scores. 
+                    OpenSERP runs on your machine — every rule readable, every score reproducible.
+                </p>
+                <div class="hero-actions">
+                    <a href="#demo" class="btn btn-primary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                        </svg>
+                        Try Live Demo
+                    </a>
+                    <a href="https://github.com/0xshaikh/openserp" target="_blank" class="btn btn-secondary">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                        </svg>
+                        View Source
+                    </a>
+                </div>
+                <div class="hero-install">
+                    <code>pip install openserp && openserp audit https://example.com</code>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">6</span>
+                        <span class="stat-label">Commands</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label">Dependencies</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">90+</span>
+                        <span class="stat-label">Tests Passing</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">0</span>
+                        <span class="stat-label">API Keys Needed</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="section" id="features">
+            <div class="container">
+                <h2 class="section-title">Everything You Need for SEO Research</h2>
+                <p class="section-desc">Six commands. Five dependencies. Zero API keys. All reproducible.</p>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M12 6v6l4 2"></path>
+                            </svg>
+                        </div>
+                        <h3>audit</h3>
+                        <p>Real BFS crawler with 13 on-page checks. 0-100 weighted rubric. Every rule readable in source.</p>
+                        <div class="feature-tags">
+                            <span class="tag">Crawler</span>
+                            <span class="tag">13 Checks</span>
+                            <span class="tag">Rubric</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"></circle>
+                                <path d="m21 21-4.35-4.35"></path>
+                            </svg>
+                        </div>
+                        <h3>keywords</h3>
+                        <p>Google Suggest autocomplete across curated modifiers. Deduped and seed-relevance filtered.</p>
+                        <div class="feature-tags">
+                            <span class="tag">Autocomplete</span>
+                            <span class="tag">Filtered</span>
+                            <span class="tag">Deduped</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M3 3v18h18"></path>
+                                <path d="m19 9-5 5-4-4-3 3"></path>
+                            </svg>
+                        </div>
+                        <h3>rank</h3>
+                        <p>DuckDuckGo SERP parse. Position tracking with SQLite history. Know where you stand.</p>
+                        <div class="feature-tags">
+                            <span class="tag">SERP</span>
+                            <span class="tag">History</span>
+                            <span class="tag">SQLite</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                        </div>
+                        <h3>backlinks</h3>
+                        <p>Live search operators. Fetches each candidate and verifies it really links back.</p>
+                        <div class="feature-tags">
+                            <span class="tag">Verified</span>
+                            <span class="tag">Live</span>
+                            <span class="tag">No Database</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3>compete</h3>
+                        <p>One command: audit + keywords + rank → competitor profile. Markdown output.</p>
+                        <div class="feature-tags">
+                            <span class="tag">One-Click</span>
+                            <span class="tag">Markdown</span>
+                            <span class="tag">Profile</span>
+                        </div>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="8" y1="21" x2="16" y2="21"></line>
+                                <line x1="12" y1="17" x2="12" y2="21"></line>
+                            </svg>
+                        </div>
+                        <h3>serve</h3>
+                        <p>Local Flask dashboard. Paste a URL, get the score and issue table in your browser.</p>
+                        <div class="feature-tags">
+                            <span class="tag">Browser</span>
+                            <span class="tag">Flask</span>
+                            <span class="tag">Live</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Live Demo Section -->
+        <section class="section section-dark" id="demo">
+            <div class="container">
+                <h2 class="section-title">Live Demo</h2>
+                <p class="section-desc">Get AI-powered SEO analysis for any website.</p>
+                <div class="demo-container">
+                    <div class="demo-form">
+                        <div class="form-group">
+                            <label for="demo-url">Website URL</label>
+                            <input type="text" id="demo-url" placeholder="https://example.com" value="https://example.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="api-key">Apinex API Key (Optional)</label>
+                            <input type="password" id="api-key" placeholder="sk-apx...">
+                            <p class="form-hint">Get free key at apinex.bond. Stored locally only.</p>
+                        </div>
+                        <button class="btn btn-primary btn-block" id="run-analysis">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                            </svg>
+                            Get AI Analysis
+                        </button>
+                    </div>
+                    <div class="demo-results" id="demo-results">
+                        <div class="empty-state">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M12 2a10 10 0 1 0 10 10 10 10 0 0 0-10-10z"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            <p>Enter a URL and click "Get AI Analysis" to see SEO recommendations here.</p>
+                            <p class="empty-note">Powered by Apinex free models (gpt-6-luna)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="section" id="how-it-works">
+            <div class="container">
+                <h2 class="section-title">How It Works</h2>
+                <p class="section-desc">No black boxes. No subscriptions. Just code you can read.</p>
+                <div class="how-grid">
+                    <div class="how-step">
+                        <div class="step-number">01</div>
+                        <h3>Install</h3>
+                        <code>pip install openserp</code>
+                        <p>Five dependencies. All pure Python. No compilation.</p>
+                    </div>
+                    <div class="how-step">
+                        <div class="step-number">02</div>
+                        <h3>Run</h3>
+                        <code>openserp audit https://yoursite.com</code>
+                        <p>Real crawler. Real checks. Real score.</p>
+                    </div>
+                    <div class="how-step">
+                        <div class="step-number">03</div>
+                        <h3>Fix</h3>
+                        <code>Read the issues. Fix them. Re-run.</code>
+                        <p>Every rule is in the source code. Argue with the score.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Rubric Section -->
+        <section class="section section-dark" id="rubric">
+            <div class="container">
+                <h2 class="section-title">The Audit Rubric</h2>
+                <p class="section-desc">Weights sum to exactly 100. Every rule is in the source code.</p>
+                <div class="rubric-table">
+                    <div class="rubric-header">
+                        <span>Rule</span>
+                        <span>Weight</span>
+                        <span>Severity</span>
+                        <span>Check</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">HTTPS_ENFORCED</span>
+                        <span class="rubric-weight">12</span>
+                        <span class="rubric-severity error">error</span>
+                        <span class="rubric-check">HTTPS served, HTTP redirects</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">META_DESC_OK</span>
+                        <span class="rubric-weight">10</span>
+                        <span class="rubric-severity error">error</span>
+                        <span class="rubric-check">≥80% pages, 50-160 chars</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">TITLE_OK</span>
+                        <span class="rubric-weight">10</span>
+                        <span class="rubric-severity error">error</span>
+                        <span class="rubric-check">≥90% pages, 10-60 chars</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">LINKS_HEALTHY</span>
+                        <span class="rubric-weight">10</span>
+                        <span class="rubric-severity error">error</span>
+                        <span class="rubric-check">≥90% sampled links return 2xx/3xx</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">H1_OK</span>
+                        <span class="rubric-weight">8</span>
+                        <span class="rubric-severity error">error</span>
+                        <span class="rubric-check">≥90% pages, exactly one H1</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">SITEMAP_OK</span>
+                        <span class="rubric-weight">8</span>
+                        <span class="rubric-severity error">error</span>
+                        <span class="rubric-check">Parseable sitemap reachable</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">IMG_ALT_OK</span>
+                        <span class="rubric-weight">8</span>
+                        <span class="rubric-severity warning">warning</span>
+                        <span class="rubric-check">≥80% img tags carry alt</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">CONTENT_LEN_OK</span>
+                        <span class="rubric-weight">6</span>
+                        <span class="rubric-severity warning">warning</span>
+                        <span class="rubric-check">≥70% pages have 300+ words</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">ROBOTS_OK</span>
+                        <span class="rubric-weight">6</span>
+                        <span class="rubric-severity warning">warning</span>
+                        <span class="rubric-check">robots.txt published, not blocking</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">REDIRECTS_CLEAN</span>
+                        <span class="rubric-weight">6</span>
+                        <span class="rubric-severity warning">warning</span>
+                        <span class="rubric-check">No page needs >2 redirect hops</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">TITLE_UNIQUE</span>
+                        <span class="rubric-weight">6</span>
+                        <span class="rubric-severity warning">warning</span>
+                        <span class="rubric-check">≥95% page titles unique</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">JSONLD_OK</span>
+                        <span class="rubric-weight">5</span>
+                        <span class="rubric-severity warning">warning</span>
+                        <span class="rubric-check">≥50% pages emit schema.org JSON-LD</span>
+                    </div>
+                    <div class="rubric-row">
+                        <span class="rubric-rule">CANONICAL_OK</span>
+                        <span class="rubric-weight">5</span>
+                        <span class="rubric-severity info">info</span>
+                        <span class="rubric-check">≥70% pages declare rel=canonical</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparison Section -->
+        <section class="section" id="comparison">
+            <div class="container">
+                <h2 class="section-title">Why OpenSERP?</h2>
+                <p class="section-desc">What you get vs what you don't pay for.</p>
+                <div class="comparison-grid">
+                    <div class="comparison-card">
+                        <h3>What You Get</h3>
+                        <ul class="check-list">
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Real crawls from your machine</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Every rule readable in source</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Scores you can reproduce</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero API keys needed</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Runs on your machine</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Open source (MIT)</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> 90+ tests passing</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Python 3.10+</li>
+                        </ul>
+                    </div>
+                    <div class="comparison-card">
+                        <h3>What You Don't Pay For</h3>
+                        <ul class="cross-list">
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> $100-500/month subscriptions</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Black-box algorithms</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> "Check your dashboard" dead ends</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Multi-terabyte crawled indices</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Proprietary data access</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Vendor lock-in</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Hidden costs</li>
+                            <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> Non-reproducible scores</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Docs Section -->
+        <section class="section section-dark" id="docs">
+            <div class="container">
+                <h2 class="section-title">Documentation</h2>
+                <p class="section-desc">Quick start, usage examples, and API reference.</p>
+                <div class="docs-grid">
+                    <div class="doc-card">
+                        <h3>Installation</h3>
+                        <pre><code>git clone https://github.com/0xshaikh/openserp.git
+cd openserp
+pip install -e .</code></pre>
+                        <a href="https://github.com/0xshaikh/openserp#quick-start" target="_blank" class="doc-link">View full docs →</a>
+                    </div>
+                    <div class="doc-card">
+                        <h3>Run an Audit</h3>
+                        <pre><code>openserp audit https://example.com \
+  --max-pages 20 \
+  --link-probes 25</code></pre>
+                        <a href="https://github.com/0xshaikh/openserp#audit--crawl-check-score" target="_blank" class="doc-link">View audit docs →</a>
+                    </div>
+                    <div class="doc-card">
+                        <h3>Keyword Research</h3>
+                        <pre><code>openserp keywords \
+  "seo audit" \
+  --count 20</code></pre>
+                        <a href="https://github.com/0xshaikh/openserp#keywords--google-suggest-autocomplete" target="_blank" class="doc-link">View keyword docs →</a>
+                    </div>
+                    <div class="doc-card">
+                        <h3>Start Dashboard</h3>
+                        <pre><code>pip install openserp[serve]
+openserp serve
+# Open http://localhost:5000</code></pre>
+                        <a href="https://github.com/0xshaikh/openserp#serve--local-dashboard" target="_blank" class="doc-link">View serve docs →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Roadmap Section -->
+        <section class="section" id="roadmap">
+            <div class="container">
+                <h2 class="section-title">Roadmap</h2>
+                <p class="section-desc">What's coming next.</p>
+                <div class="roadmap-grid">
+                    <div class="roadmap-card current">
+                        <div class="roadmap-status">Current</div>
+                        <h3>v1.0 — Core Toolkit</h3>
+                        <ul>
+                            <li>✓ audit — Site audit with 13 checks</li>
+                            <li>✓ keywords — Google Suggest autocomplete</li>
+                            <li>✓ rank — DuckDuckGo SERP tracking</li>
+                            <li>✓ backlinks — Verified backlink discovery</li>
+                            <li>✓ compete — Competitor profile generator</li>
+                            <li>✓ serve — Local Flask dashboard</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-card next">
+                        <div class="roadmap-status">Next</div>
+                        <h3>v1.1 — Improvements</h3>
+                        <ul>
+                            <li>○ Export to PDF/CSV</li>
+                            <li>○ Scheduled audits with cron</li>
+                            <li>○ Comparison mode (before/after)</li>
+                            <li>○ Plugin system for custom checks</li>
+                            <li>○ Docker image</li>
+                        </ul>
+                    </div>
+                    <div class="roadmap-card future">
+                        <div class="roadmap-status">Future</div>
+                        <h3>v2.0 — Advanced</h3>
+                        <ul>
+                            <li>○ Webhook notifications</li>
+                            <li>○ Multi-site dashboard</li>
+                            <li>○ AI-powered recommendations</li>
+                            <li>○ API server for headless use</li>
+                            <li>○ CI/CD integration</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <svg width="24" height="24" viewBox="0 0 32 32" fill="none">
+                        <rect width="32" height="32" rx="8" fill="#10b981"/>
+                        <path d="M8 12l4 4 8-8" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M8 20h16" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span>OpenSERP</span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/0xshaikh/openserp" target="_blank">GitHub</a>
+                    <a href="https://github.com/0xshaikh/openserp#readme" target="_blank">Documentation</a>
+                    <a href="https://github.com/0xshaikh" target="_blank">Author</a>
+                    <a href="https://apinex.bond" target="_blank">AI Models</a>
+                </div>
+            </div>
+            <p class="footer-copy">Open source SEO toolkit. Built by <a href="https://github.com/0xshaikh" target="_blank">@0xshaikh</a>. MIT License.</p>
+        </div>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
