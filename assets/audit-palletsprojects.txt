@@ -1,0 +1,86 @@
+[36m╭─[0m[36m─────────────────────────[0m[36m openserp audit — [0m[1;36mpalletsprojects.com[0m[36m [0m[36m─────────────────────────[0m[36m─╮[0m
+[36m│[0m [1mSEO score[0m [1m34.0 / 100[0m                                                                     [36m│[0m
+[36m│[0m pages [1m5[0m fetched / [1m5[0m parsed                                                               [36m│[0m
+[36m│[0m sitemap [1mnot found[0m  ·  https [1myes[0m  ·  18.85s                                               [36m│[0m
+[36m╰──────────────────────────────────────────────────────────────────────────────────────────╯[0m
+[3m                                    Site checks                                     [0m
+[1mcheck         [0m[1m [0m[1m [0m[1mresult                                                              [0m
+[1mrobots.txt    [0m[1m [0m present                                                             
+[1msitemap.xml   [0m[1m [0m not found (https://palletsprojects.com/sitemap_index.xml: HTTP 404) 
+[1mhttps -> https[0m[1m [0m True                                                                
+[1mhttps detail  [0m[1m [0m start URL is already HTTPS; HTTP 200 -> https://palletsprojects.com/
+[1mlink sample   [0m[1m [0m 10 probed                                                           
+ [1;31m✗ ERROR[0m [1mMETA_DESC_OK[0m [1;2m([0m[2mweight [0m[1;2;36m10[0m[1;2m)[0m — threshold not met: [1;36m80[0m%+ of pages have a [1;36m50[0m-[1;36m160[0m character
+meta description — [1;36m0[0m% of [1;36m5[0m pages pass
+   [36mfix:[0m Add a compelling unique [1m<[0m[1;95mmeta[0m[39m [0m[33mname[0m[39m=[0m[32m"description"[0m[1m>[0m of [1;36m50[0m-[1;36m160[0m chars.
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/donate[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/contributing[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/ecosystem[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/blog/[0m
+ [1;31m✗ ERROR[0m [1mTITLE_OK[0m [1;2m([0m[2mweight [0m[1;2;36m10[0m[1;2m)[0m — threshold not met: [1;36m90[0m%+ of pages have a [1;36m10[0m-[1;36m60[0m character 
+[1m<[0m[1;95mtitle[0m[1m>[0m — [1;36m0[0m% of [1;36m5[0m pages pass
+   [36mfix:[0m Give every page a unique [1;36m10[0m-[1;36m60[0m char [1m<[0m[1;95mtitle[0m[1m>[0m describing the content.
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/donate[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/contributing[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/ecosystem[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/blog/[0m
+ [1;31m✗ ERROR[0m [1mH1_OK[0m [1;2m([0m[2mweight [0m[1;2;36m8[0m[1;2m)[0m — threshold not met: [1;36m90[0m%+ of pages have exactly one [1m<[0m[1;95mh1[0m[1m>[0m — [1;36m80[0m% of 
+[1;36m5[0m pages have exactly one H1
+   [36mfix:[0m Use exactly one [1m<[0m[1;95mh1[0m[1m>[0m per page, containing the primary keyword.
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/[0m
+ [1;31m✗ ERROR[0m [1mSITEMAP_OK[0m [1;2m([0m[2mweight [0m[1;2;36m8[0m[1;2m)[0m — threshold not met: A parseable sitemap.xml is reachable — 
+[4;94mhttps://palletsprojects.com/sitemap_index.xml:[0m HTTP [1;36m404[0m
+   [36mfix:[0m Publish a valid sitemap.xml and reference it from robots.txt.
+ [1;33m! WARNING[0m [1mIMG_ALT_OK[0m [1;2m([0m[2mweight [0m[1;2;36m8[0m[1;2m)[0m — threshold not met: [1;36m80[0m%+ of [1m<[0m[1;95mimg[0m[1m>[0m tags carry an alt 
+attribute — [1;36m0[0m% of [1;36m5[0m image-bearing pages fully covered
+   [36mfix:[0m Add meaningful alt text to images; use [33malt[0m=[32m""[0m only for decorative ones.
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/donate[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/contributing[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/ecosystem[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/blog/[0m
+ [1;33m! WARNING[0m [1mCONTENT_LEN_OK[0m [1;2m([0m[2mweight [0m[1;2;36m6[0m[1;2m)[0m — threshold not met: [1;36m70[0m%+ of pages have [1;36m300[0m+ words of 
+visible text — [1;36m60[0m% of [1;36m5[0m pages reach [1;36m300[0m words
+   [36mfix:[0m Aim for at least [1;36m300[0m words of substantive text per page.
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/donate[0m
+ [1;33m! WARNING[0m [1mTITLE_UNIQUE[0m [1;2m([0m[2mweight [0m[1;2;36m6[0m[1;2m)[0m — threshold not met: [1;36m95[0m%+ of page titles are unique — [1;36m4[0m 
+duplicate [1;35mtitle[0m[1m([0ms[1m)[0m across [1;36m5[0m titled pages
+   [36mfix:[0m Titles repeat when pages are duplicates — differentiate them.
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/donate[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/contributing[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/ecosystem[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/blog/[0m
+ [1;33m! WARNING[0m [1mJSONLD_OK[0m [1;2m([0m[2mweight [0m[1;2;36m5[0m[1;2m)[0m — threshold not met: [1;36m50[0m%+ of pages emit schema.org JSON-LD —
+[1;36m0[0m% of [1;36m5[0m pages emit JSON-LD
+   [36mfix:[0m Add [1m<[0m[1;95mscript[0m[39m [0m[33mtype[0m[39m=[0m[32m"application[0m[32m/ld+json"[0m[1m>[0m with WebSite/Article schema.
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/donate[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/contributing[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/ecosystem[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/blog/[0m
+ [1;34mi INFO[0m [1mCANONICAL_OK[0m [1;2m([0m[2mweight [0m[1;2;36m5[0m[1;2m)[0m — threshold not met: [1;36m70[0m%+ of pages declare a [33mrel[0m=[35mcanonical[0m 
+URL — [1;36m0[0m% of [1;36m5[0m pages declare canonical
+   [36mfix:[0m Add [1m<[0m[1;95mlink[0m[39m [0m[33mrel[0m[39m=[0m[32m"canonical"[0m[1m>[0m to prevent duplicate-content ambiguity.
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/donate[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/contributing[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/ecosystem[0m
+   [2m· [0m[2;4;94mhttps://palletsprojects.com/blog/[0m
+[3m                     Pages (5 parsed)                      [0m
+[1murl                   [0m[1m [0m[1m [0m[1mtitle[0m[1m [0m[1m [0m[1mdesc[0m[1m [0m[1m [0m[1mh1[0m[1m [0m[1m [0m[1mwords[0m[1m [0m[1m [0m[1m KB[0m[1m [0m[1m [0m[1min/out[0m
+https://…/             [2m [0m[2m    7[0m[2m [0m[2m [0m[2m   —[0m[2m [0m  0     96 [2m [0m[2m4.0[0m[2m [0m[2m [0m[2m  20/5[0m
+https://…/donate       [2m [0m[2m    7[0m[2m [0m[2m [0m[2m   —[0m[2m [0m  1    179 [2m [0m[2m3.0[0m[2m [0m[2m [0m[2m  13/9[0m
+https://…/contributing [2m [0m[2m    7[0m[2m [0m[2m [0m[2m   —[0m[2m [0m  1    742 [2m [0m[2m7.0[0m[2m [0m[2m [0m[2m  26/6[0m
+https://…/ecosystem    [2m [0m[2m    7[0m[2m [0m[2m [0m[2m   —[0m[2m [0m  1    397 [2m [0m[2m4.5[0m[2m [0m[2m [0m[2m  13/8[0m
+https://…/blog/        [2m [0m[2m    7[0m[2m [0m[2m [0m[2m   —[0m[2m [0m  1    567 [2m [0m[2m8.0[0m[2m [0m[2m [0m[2m  51/5[0m
+[3m         Image alt coverage         [0m
+[1murl                   [0m[1m [0m[1m [0m[1malt coverage[0m
+https://…/                       0/8
+https://…/donate                 0/1
+https://…/contributing           0/1
+https://…/ecosystem              0/1
+https://…/blog/                  0/1
