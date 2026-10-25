@@ -19,19 +19,24 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install
+      - name: Install (editable for tests)
         run: |
           python -m pip install --upgrade pip
           pip install -e . pytest
+
       - name: Test (offline — network is monkeypatched)
         run: pytest -q
+
       - name: Packaging — non-editable wheel must provide the console script
         run: |
-          # `pip install git+https://github.com/0xshaikh/openserp.git` does a
-          # non-editable build, so prove that path too, not just -e .
+          # Uninstall editable install first — --force-reinstall alone doesn't
+          # remove the .pth file, so the console script still points at the
+          # repo checkout (which gets deleted at the end of the job).
+          pip uninstall -y openserp -q
           pip wheel . -w wheelhouse --no-deps -q
-          python -m pip install --force-reinstall --no-deps wheelhouse/openserp-*.whl -q
+          pip install --no-deps wheelhouse/openserp-*.whl -q
           python -c "import importlib.util; assert importlib.util.find_spec('openserp'), 'module not importable'"
+
       - name: CLI smoke test (help only, no network)
         run: |
           openserp --help
@@ -43,6 +48,7 @@ jobs:
           openserp backlinks --help
           openserp compete --help
           openserp serve --help
+
       - name: Rubric integrity guard
         run: |
           python -c "import openserp; assert sum(w for w, *_ in openserp.RUBRIC.values()) == 100, 'rubric weights must sum to 100'"
